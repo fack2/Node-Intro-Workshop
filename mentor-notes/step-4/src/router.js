@@ -15,7 +15,7 @@ const router = (request, response) => {
         response.end(file);
       }
     });
-  } else if (url.indexOf('public') !== -1) {
+  } else if (url.includes('public')) {
     const extension = url.split('.')[1];
     const extensionType = {
       html: 'text/html',
