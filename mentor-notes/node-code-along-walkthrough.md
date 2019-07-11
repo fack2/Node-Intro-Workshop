@@ -227,7 +227,7 @@ change all the else if's into this:
 
 ```js
 // 1 - indexOf checks if the url has a public in it
-else if (url.indexOf('public') !== -1) {
+else if (url.includes('public')) {
     // 2 - check the file extension by splitting
     const extension = url.split('.')[1];
     // 3 - list extension types
@@ -323,7 +323,7 @@ const router = (request, response) => {
   const url = request.url;
   if (url === '/') {
     handlers.handleHomeRoute(request, response);
-  } else if (url.indexOf('public') !== -1) {
+  } else if (url.includes('public')) {
     handlers.handlePublic(request, response, url);
   } else {
     response.writeHead(404, { 'Content-Type': 'text/html' });
