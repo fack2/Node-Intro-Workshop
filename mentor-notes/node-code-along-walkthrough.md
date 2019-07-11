@@ -226,7 +226,7 @@ else if (url === '/public/main.css') {
 change all the else if's into this: 
 
 ```js
-// 1 - indexOf checks if the url has a public in it
+// 1 -  check if the url has a public in it
 else if (url.includes('public')) {
     // 2 - check the file extension by splitting
     const extension = url.split('.')[1];
