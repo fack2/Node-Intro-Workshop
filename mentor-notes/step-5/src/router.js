@@ -4,7 +4,7 @@ const router = (request, response) => {
   const url = request.url;
   if (url === '/') {
     handlers.handleHomeRoute(request, response);
-  } else if (url.indexOf('public') !== -1) {
+  } else if (url.includes('public')) {
     handlers.handlePublic(request, response, url);
   } else {
     response.writeHead(404, { 'Content-Type': 'text/html' });
